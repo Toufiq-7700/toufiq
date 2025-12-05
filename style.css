@@ -38,7 +38,7 @@ body {
 }
 
 .mainContent {
-    height: 350vh;
+    /* height: 350vh; */
     background-color: #2a2a2a;
     border: 1px solid #3a3a3a;
     border-radius: 16px;
@@ -296,4 +296,5 @@ nav a{
     border-radius: 5px;
     font-size: 0.75rem;
     margin-right: 5px;
+
 }
