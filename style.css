@@ -298,3 +298,39 @@ nav a{
     margin-right: 5px;
 
 }
+
+
+
+
+@media screen and (max-width:1200px) {
+    .mainContent{
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .contentSidebar{
+        position: static;
+        height: auto;
+    }
+}
+
+@media screen and (max-width:750px) {
+    .projectContainer{
+        grid-template-columns: 1fr;
+    }
+
+    #navigation nav {
+        /* Adjust nav for smaller screens */
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .contentSidebar{
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+    }
+}
+
+
+
