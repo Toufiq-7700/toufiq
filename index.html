@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Toufiq's Portfolio</title>
     <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
     <div class="Content">
         <div class="contentSidebar">
             <!-- Profile -->
-             <div class="profile">
+            <div class="profile">
                 <img id="a" src="Images/image.png" alt="">
                 <h2>Md. Toufiq Imroz Khealid Khan</h2>
                 <p>AI & ML</p>
-             </div>
+            </div>
 
             <!-- Contact -->
-             <div class="contact">
+            <div class="contact">
                 <div class="email">
                     <h3 class="em">Email</h3>
                     <a href="mailto:toufiqimroz161055@gmail.com" class="val">toufiqimroz161055@gmail.com</a>
@@ -34,41 +36,46 @@
                     <h3 class="em">Location</h3>
                     <p class="val">Dhaka, Bangladesh.</p>
                 </div>
-             </div>
+            </div>
 
             <!-- Social Media -->
-             <div class="social">
+            <div class="social">
                 <a href="https://github.com/Toufiq-7700"><img src="https://simpleicons.org/icons/github.svg" alt=""></a>
-                <a href="https://www.linkedin.com/in/md-toufiq-imroz-khealid-khan-b155a4396/"><img src="https://www.svgrepo.com/show/521725/linkedin.svg" alt=""></a>
-             </div>
+                <a href="https://www.linkedin.com/in/md-toufiq-imroz-khealid-khan-b155a4396/"><img
+                        src="https://www.svgrepo.com/show/521725/linkedin.svg" alt=""></a>
+            </div>
         </div>
 
 
         <div class="mainContent">
             <!-- Navigation -->
-             <div id="navigation">
+            <div id="navigation">
                 <nav>
                     <a href="#about" class="active">About</a>
                     <a href="#skills">Skills</a>
                     <a href="#education">Education</a>
                     <a href="#projects">Projects</a>
                 </nav>
-             </div>
+            </div>
 
 
             <!-- About -->
-             <div id="about">
+            <div id="about" class="hidden">
                 <h2 class="heading">About Me</h2>
                 <div class="line"></div>
-                <p class="content">I’m Toufiq, a passionate learner exploring the world of Artificial Intelligence and Machine Learning.
-                    I enjoy solving problems through coding and understanding how technology can make everyday life smarter.
-                    I’m constantly improving my skills by practicing algorithms, data structures, and real-world projects.
-                    My goal is to build intelligent and efficient solutions that combine creativity, logic, and impact.</p>
-             </div>
+                <p class="content">I’m Toufiq, a passionate learner exploring the world of Artificial Intelligence and
+                    Machine Learning.
+                    I enjoy solving problems through coding and understanding how technology can make everyday life
+                    smarter.
+                    I’m constantly improving my skills by practicing algorithms, data structures, and real-world
+                    projects.
+                    My goal is to build intelligent and efficient solutions that combine creativity, logic, and impact.
+                </p>
+            </div>
 
 
             <!-- Skill -->
-             <div id="skills">
+            <div id="skills" class="hidden">
                 <h2 class="heading">Skills</h2>
                 <div class="line"></div>
                 <div class="grid-container">
@@ -113,10 +120,10 @@
                         <h3>CSS-3</h3>
                     </div>
                 </div>
-             </div>
+            </div>
 
             <!-- Education -->
-            <div id="education">
+            <div id="education" class="hidden">
                 <h2 class="heading">Education</h2>
                 <div class="line"></div>
                 <div class="edu">
@@ -135,13 +142,13 @@
                         <p class="institue">Rajbari Government College</p>
                         <div class="goal"></div>
                     </div>
-                   
+
                 </div>
             </div>
 
 
             <!-- projects -->
-            <div id="projects">
+            <div id="projects" class="hidden">
                 <h2 class="heading">Projects</h2>
                 <div class="line"></div>
                 <div class="projectContainer">
@@ -174,6 +181,22 @@
 
         </div>
     </div>
-    
+
+    <script defer>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                console.log(entry)
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                } else {
+                    entry.target.classList.remove('show');
+                }
+            });
+        });
+
+        const hiddenElements = document.querySelectorAll('.hidden');
+        hiddenElements.forEach((el) => observer.observe(el));
+    </script>
 </body>
+
 </html>
